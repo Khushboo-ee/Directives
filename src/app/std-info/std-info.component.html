@@ -1,0 +1,37 @@
+<div>
+<table width="100%" border="1" >
+
+    <tr>
+        <th>Roll number</th>
+        <th>Student name</th>
+        <th>Course</th>
+        <th>Fees</th>
+        <th>Operatns</th>
+    </tr>
+    <tr *ngFor = "let std of sinfo; let i = index" >
+        <td>{{std.rollno}}</td>
+        <td>{{std.sname}}</td>
+        <td>{{std.course}}</td>
+        <td>{{std.fees}}</td>
+        <td><input type="button" value="Remove" (click)="DeleteStudent(i)" /></td>
+    </tr>
+    <tr  >
+       <td>
+        <input type="text" placeholder="Roll no" [(ngModel)]="newstd.rollno" />
+    </td>
+    <td>
+        <input type="text" placeholder="Full name" [(ngModel)]="newstd.sname" />
+    </td>
+       <td>
+        <input type="text" placeholder="Course" [(ngModel)]="newstd.course" />
+       </td>
+        <td>
+            <input type="text" placeholder="Fees" [(ngModel)]="newstd.fees"/>
+        </td>
+        <td>
+            <input type="button" value="Add" (click)="AddStudent()" />
+        </td>
+      
+    </tr>
+</table>
+</div>

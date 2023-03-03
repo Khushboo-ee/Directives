@@ -1,0 +1,17 @@
+<div style="text-align:center;width:100%">
+
+    Enter Marks : 
+        <input type="text"  [(ngModel)]="marks" />
+        <input type="button"  value="Click Me" (click)="CheckMarks()" />
+    
+        <div *ngIf="b; then temp1; else temp2"></div>
+    
+        <ng-template  #temp1>
+            <h2 [ngClass]="mycss">{{marks}}<br />Congrats</h2>
+        </ng-template>
+    
+        <ng-template  #temp2>
+            <h2 [ngClass]="mycss">{{marks}}<br />Betterluck next time</h2>
+        </ng-template>
+            
+    </div>
