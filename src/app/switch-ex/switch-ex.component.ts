@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SwitchExComponent implements OnInit {
 
+  country: string ="";
   constructor() { }
 
   ngOnInit(): void {

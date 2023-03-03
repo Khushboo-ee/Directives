@@ -1,1 +1,18 @@
-<p>switch-ex works!</p>
+<div style="text-align: center;width: 100%;">
+
+    <select [(ngModel)]="country">
+        <option value="-1">Select country</option>
+        <option value="USA">America</option>
+        <option value="UK">United kingdom</option>
+        <option value="India">India</option>
+        <option value="Belgium">Belgium</option>
+    </select>
+
+    <div [ngSwitch]="country">
+        <p *ngSwitchCase="'India'">You have selected India</p>
+        <p *ngSwitchCase="'USA'">You have selected America</p>
+        <p *ngSwitchCase="'UK'">You have selected United Kingdom</p>
+        <p *ngSwitchCase="'Belgium'">You have selected Belgium</p>
+        <p *ngSwitchDefault>Please select any country from the list</p>
+    </div>
+</div>
